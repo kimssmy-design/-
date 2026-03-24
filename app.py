@@ -4,7 +4,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 # 1. 페이지 기본 설정
-st.set_page_config(page_title="체육복 구매3-2", layout="centered")
+st.set_page_config(page_title="체육복신청명단", layout="centered")
 
 # --- 구글 시트 저장 함수 ---
 def save_to_google_sheet(data_list):
