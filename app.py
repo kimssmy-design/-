@@ -43,9 +43,13 @@ if st.session_state.step == 'info':
     st.title("📢 하복 체육복 공동구매 안내")
     
     st.success("""안녕하십니까? 우리학교 교육활동에 관심과 성원을 보내주셔서 감사합니다 😊
+               
 본교에서는 학생들의 생활편의를 위해 교복, 생활복, 체육복을 착용하며 사복 착용은 제한하고 있습니다.
+               
 4월부터는 학교 지정 복장 착용 지도를 강화하오니 가정에서도 협조 부탁드립니다 🙏
+               
 체육복은 치수 확인 후 3/27까지 신청해 주시기 바라며, 이후에는 개별 구매 부탁드립니다 💛
+               
 체육복 착용 등교가 가능하며, 체육 시간에는 지정 체육복 착용을 지도하고 있습니다 👍""")
     
     with st.expander("📝 상세 안내 및 입금 정보 확인", expanded=True):
@@ -80,7 +84,7 @@ elif st.session_state.step == 'form':
     default_size = st.session_state.get('recommended_size', "95호")
     
     with st.form("purchase_form"):
-        st_id = st.text_input("학번", placeholder="예: 10101")
+        st_id = st.text_input("학번", placeholder="예: 3201")
         name = st.text_input("학생 성명")
         all_sizes = ["80호", "85호", "90호", "95호", "100호", "105호", "110호", "115호", "120호", "직접 입력"]
         final_size = st.selectbox("최종 선택 사이즈", all_sizes, index=all_sizes.index(default_size) if default_size in all_sizes else 3)
